@@ -45,3 +45,74 @@ function showSlider(type) {
     nextDom.click();
   }, timeAutoNext);
 }
+
+// buat fullscreen
+
+// tekan F untuk fullscreen
+document.addEventListener("keydown", function(e) {
+  if (e.key.toLowerCase() === "f") {
+    openFullscreen();
+  }
+});
+
+
+// exit fullscreen otomatis kalau user tekan ESC
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape") {
+    exitFullscreen();
+  }
+});
+
+
+function openFullscreen() {
+  let elem = document.documentElement;
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
+function exitFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+}
+
+// MOBILE FULLSCREEN FEATURE
+let enterFsBtn = document.getElementById("enterFs");
+let exitFsBtn = document.getElementById("exitFs");
+
+// OPEN FS
+enterFsBtn?.addEventListener("click", () => {
+  openFullscreen();
+  enterFsBtn.classList.add("hidden");
+  exitFsBtn.classList.remove("hidden");
+});
+
+// EXIT FS
+exitFsBtn?.addEventListener("click", () => {
+  exitFullscreen();
+  exitFsBtn.classList.add("hidden");
+  enterFsBtn.classList.remove("hidden");
+});
+
+// FS functions
+function openFullscreen() {
+  let elem = document.documentElement;
+  if (elem.requestFullscreen) elem.requestFullscreen();
+  else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+}
+
+function exitFullscreen() {
+  if (document.exitFullscreen) document.exitFullscreen();
+  else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+}
+
