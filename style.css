@@ -1,0 +1,433 @@
+header nav a {
+  font-family: "stack sans notch";
+}
+
+header .titleWeb {
+  font-family: "Stack Sans Notch";
+}
+
+.list .item .detail .title {
+  font-family: "Stack Sans Notch";
+  text-transform: uppercase;
+}
+
+.list .item .detail .name {
+  font-family: "Stack Sans Notch";
+}
+
+.list .item .detail figure .animeName {
+  font-family: caveat;
+}
+
+.list .item .detail figure figcaption {
+  font-family: stack sans notch;
+}
+
+header {
+  z-index: 99999;
+}
+
+header nav {
+  width: 1200px;
+  max-width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  margin: auto;
+  gap: 2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  transition: color 0.5s ease;
+  transition: 0.6s ease-out;
+  z-index: 999;
+  text-shadow: 20px 15px 30px black;
+}
+
+header nav a:hover {
+  color: skyblue;
+  transform: translateY(-3px);
+}
+
+/* slider brok */
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+  position: relative;
+}
+
+.slider .banner .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.slider .banner .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .banner .list .item .detail {
+  position: absolute;
+  width: 1200px;
+  max-width: 80%;
+  top: 20%;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 12px 30px black;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.slider .banner .list .item .detail .des .title {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+.slider .banner .list .item .detail .des .name {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.slider .banner .list .item .detail .des {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.slider .banner .list .item .detail figure .animeName {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.slider .banner .list .item .detail figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 50%;
+  text-transform: capitalize;
+}
+
+.slider .banner .list .item .detail figure figcaption {
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  font-weight: 100;
+}
+
+.slider .banner .list .item .detail figure .more {
+  background-color: rgba(240, 248, 255, 50%);
+  text-decoration: none;
+  color: black;
+  font-family: stack sans notch;
+  width: 5.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1.4rem;
+  padding: 0.6rem 0.8rem;
+  text-shadow: none;
+}
+
+.slider .banner .list .item .detail figure .more:hover {
+  background-color: rgb(0, 0, 0);
+  color: lab(100% 0.01 -0.01);
+}
+
+.thumbnail {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  max-width: max-content;
+  left: 60%;
+  bottom: 60px;
+  z-index: 99999;
+}
+
+.thumbnail .item {
+  position: relative;
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+}
+
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.thumbnail .item .detail {
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  color: #fff;
+  z-index: 1;
+  text-align: right;
+}
+
+.thumbnail .item .detail::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.thumbnail .item .detail .name {
+  font-family: stack sans notch;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.thumbnail .item .detail blockquote {
+  font-size: 0.8rem;
+}
+
+.arrows {
+  position: absolute;
+  right: 55%;
+  bottom: 10%;
+  gap: 1rem;
+  display: flex;
+  width: 300px;
+  max-width: 30%;
+  align-items: center;
+  text-decoration: none;
+  border-style: none;
+}
+
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-family: monospace;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 9999;
+  border: none;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.arrows button:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Initial animating wkww */
+
+.slider .banner .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+.slider .banner .list .item:nth-child(1) .title,
+.slider .banner .list .item:nth-child(1) .name,
+.slider .banner .list .item:nth-child(1) figure,
+.slider .banner .list .item:nth-child(1) .more {
+  transform: translateY(50%);
+  filter: blur(50px);
+  opacity: 0;
+  animation: showDetail 1s 0.8s linear 1 forwards;
+}
+
+@keyframes showDetail {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.slider .banner .list .item:nth-child(1) .title {
+  animation-delay: 0.8s;
+}
+.slider .banner .list .item:nth-child(1) .name {
+  animation-delay: 1s;
+}
+.slider .banner .list .item:nth-child(1) figure {
+  animation-delay: 1.2s;
+}
+.slider .banner .list .item:nth-child(1) .more {
+  animation-delay: 1.4s;
+}
+
+/* action next */
+
+.slider.next .banner .list .item:nth-child(1) img {
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  left: 60%;
+  bottom: 60px;
+  border-radius: 8px;
+  animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+  to {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.slider.next .thumbnail .item:nth-last-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+  to {
+    width: 150px;
+  }
+}
+
+.slider.next .thumbnail {
+  transform: translateX(150px);
+  animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* initialisasi yg prev */
+.slider.prev .banner .list .item:nth-child(2) {
+  z-index: 2;
+}
+.slider.prev .banner .list .item:nth-child(2) > img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+  to {
+    width: 150px;
+    height: 220px;
+    left: 60%;
+    bottom: 60px;
+    border-radius: 8px;
+  }
+}
+
+.slider.prev .thumbnail .item:nth-child(1) {
+  width: 0;
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.slider.prev .banner .list .item:nth-child(2) .title,
+.slider.prev .banner .list .item:nth-child(2) .name,
+.slider.prev .banner .list .item:nth-child(2) figure,
+.slider.prev .banner .list .item:nth-child(2) .more {
+  animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+.slider.next .arrows button,
+.slider.prev .arrows button {
+  pointer-events: none;
+}
+
+.time {
+  width: 100%;
+  height: 3px;
+  background-color: #f1683a;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.slider.next .time,
+.slider.prev .time {
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
+@keyframes timeRunning {
+  to {
+    width: 0;
+  }
+}
+
+/* responsif */
+
+@media (max-width: 768px) {
+  .slider .banner .list .item .detail {
+    top: 10%;
+    max-width: 90%;
+  }
+
+  .slider .banner .list .item .detail .name {
+    font-size: 2rem;
+  }
+
+  .slider .banner .list .item .detail figure .animeName {
+    font-size: 1.4rem;
+  }
+
+  .thumbnail {
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    gap: 10px;
+  }
+
+  .thumbnail .item {
+    width: 90px;
+    height: 140px;
+  }
+
+  .arrows {
+    right: 50%;
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail .item {
+    width: 70px;
+    height: 110px;
+  }
+
+  .slider .banner .list .item .detail figure {
+    max-width: 90%;
+  }
+}
+
+
